@@ -1,0 +1,9 @@
+<h1>Author</h1>
+<ul>
+{% for author in object_list %}
+    <li>{{ author.name }} <a href="{% url 'author-detail' pk=author.pk%}">detail</a></li>
+{% empty %}
+    <li>No authors yet.</li>
+{% endfor %}
+</ul>
+<a href="{% url 'home' %}">home</a>
